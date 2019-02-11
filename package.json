@@ -6,6 +6,9 @@
   "scripts": {
     "test": "clear&&./node_modules/eslint/bin/eslint.js .&&./node_modules/mocha/bin/mocha"
   },
+  "pre-commit": [
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://d5avard@bitbucket.org/d5avard/javascript-template.git"
@@ -16,6 +19,7 @@
   "homepage": "https://bitbucket.org/d5avard/javascript-template#readme",
   "devDependencies": {
     "eslint": "^5.13.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2"
   }
 }

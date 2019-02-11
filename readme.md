@@ -3,7 +3,8 @@
 Configuration d'un projet de base.
 - IDE VS Code et configuré minimalement.
 - ESLint est configuré minimalement pour l'utilisation de Node et de Mocha.
-- Un premier test est configuré et il utilise la suite de etsts Mocha.
+- Un premier test est configuré et il utilise la suite de tests Mocha.
+- La composante pre-commit est installé et elle exécute eslint et les tests lorsqu'un développeur effectue un commit.
 
 ## Installation et exécution:
 ```
@@ -32,3 +33,4 @@ Références:
 3. https://github.com/eslint/eslint
 4. https://mochajs.org/
 5. https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md
+6. https://www.npmjs.com/package/pre-commit
