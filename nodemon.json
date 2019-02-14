@@ -1,0 +1,9 @@
+{
+  "ext": "js, json, hbs",
+  "events": {
+    "restart": "clear&&npm test&&osascript -e 'display notification \"App restarted\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "."
+  ]
+}

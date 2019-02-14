@@ -2,9 +2,12 @@
   "name": "javascript-template",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    "test": "clear&&./node_modules/eslint/bin/eslint.js .&&./node_modules/mocha/bin/mocha"
+    "start": "node server.js",
+    "start-dev": "clear&&npm test&&./node_modules/nodemon/bin/nodemon.js server.js",
+    "test": "clear&&./node_modules/eslint/bin/eslint.js .&&./node_modules/mocha/bin/mocha",
+    "fix": "clear&&./node_modules/eslint/bin/eslint.js --fix ."
   },
   "pre-commit": [
     "test"
@@ -20,6 +23,11 @@
   "devDependencies": {
     "eslint": "^5.13.0",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.10",
     "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1"
   }
 }
