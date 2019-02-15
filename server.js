@@ -2,8 +2,9 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 
+const stage = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 3000
-const maintenance = process.env.MAINTENANCE || false
+const maintenance = process.env.MAINTENANCE != 'false'
 
 var app = express()
 
@@ -61,5 +62,7 @@ app.get('/bad', function(req, res) {
 })
 
 app.listen(port, function () {
+	process.stdout.write(`Stage: ${stage}\n`)
+	process.stdout.write(`Maintenance: ${maintenance}\n`)
 	process.stdout.write(`Server is up on port ${port}\n`)
 })
