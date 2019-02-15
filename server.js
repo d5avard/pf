@@ -55,6 +55,13 @@ app.get('/about', function(req, res) {
 	})
 })
 
+app.get('/projects', function(req, res) {
+	res.render('projects', {
+		pageTitle: 'Projects Page',
+		projectsMessage: 'Welcome to projects page!'
+	})
+})
+
 app.get('/bad', function(req, res) {
 	res.send({
 		errorMessage: 'Nothing works...'
