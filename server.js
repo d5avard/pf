@@ -3,6 +3,7 @@ const hbs = require('hbs')
 const fs = require('fs')
 
 const port = process.env.PORT || 3000
+const maintenance = process.env.MAINTENANCE || false
 
 var app = express()
 
@@ -27,7 +28,6 @@ app.use(function(req, res, next) {
 	next()
 })
 
-const maintenance = true
 app.use(function (req, res, next) {
 	if(maintenance) {
 		res.render('maintenance', {
